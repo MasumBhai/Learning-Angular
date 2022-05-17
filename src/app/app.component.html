@@ -6,4 +6,20 @@
 <app-our-address></app-our-address>
 <app-country-list></app-country-list>
 <app-sign-in></app-sign-in>
+<button (click)="click_event_fn01('Masum' )">CLick Me!</button>
+<br/><br/>
+<button (click)="click_event_fn02('Masum is my Hero' )">CLick Me!</button>
+<br/><br/>
+<input type="text" #box1 placeholder="KeyUp event"
+       (keyup)="click_event_fn02('Suspicious event is happening... '+ box1.value )"/>
+<br/><br/>
+<input type="text" #box2 placeholder="KeyDown event"
+       (keydown)="click_event_fn02('Suspicious event is happening... '+ box2.value )"/>
+<br/><br/>
+<input type="text" #box3 placeholder="after focus out it will print"
+       (blur)="click_event_fn02('Suspicious event is happening... '+ box3.value )"/>
+<br/><br/>
+<input type="text" #box4 placeholder="input event"
+       (input)="click_event_fn02('Suspicious event is happening... '+ box4.value )"/>
+<h3 (mouseover)="click_event_fn01('Suspicious event is happening... ' )">MasumBhai JindaBaad</h3>
 <app-footer></app-footer>
