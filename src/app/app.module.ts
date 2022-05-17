@@ -1,14 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ProfilingModule } from './profiling/profiling.module';
 import { AppComponent } from './app.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { OurAddressComponent } from './our-address/our-address.component';
+import { CountryListComponent } from './country-list/country-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignUpComponent,
+    HeaderComponent,
+    FooterComponent,
+    UserListComponent,
+    OurAddressComponent,
+    CountryListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ProfilingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
