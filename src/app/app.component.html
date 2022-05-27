@@ -21,5 +21,72 @@
 <br/><br/>
 <input type="text" #box4 placeholder="input event"
        (input)="click_event_fn02('Suspicious event is happening... '+ box4.value )"/>
-<h3 (mouseover)="click_event_fn01('Suspicious event is happening... ' )">MasumBhai JindaBaad</h3>
+<h3 (mouseover)="click_event_fn01('Suspicious event is happening... ' )">Mist is for prisoners</h3>
+
+<br/><br/>
+<input type="text" #box5 placeholder="getting input value"/>
+<button type="button" (click)="getting_inputValue01(box5.value)">Show Result</button>
+
+<h3>Box Value is: {{displayVal}}</h3>
+<br/><br/>
+<input type="text" #box6 placeholder="Property Binding" [disabled]=truth_value>
+<br/><br/>
+<input type="text" #box7 placeholder="Interpolation method goes wrong" disabled={{truth_value}}>
+<!--<button type="button" (click)="getting_inputValue01(box5.value)" >Show Result</button>-->
+<br/><br/>
+<h2 *ngIf="show else elseBlock01">If condition is working</h2>
+<h2 *ngIf="val_01=='Masum' then ifBlock02 else elseBlock02"></h2>
+<h2 *ngIf="show; then ifBlock01 else elseBlock02"></h2>
+
+<ng-template #ifBlock01>
+  <h2>If condition is working</h2>
+</ng-template>
+
+<ng-template #ifBlock02>
+  <h2>Only MasumBhai is real</h2>
+</ng-template>
+
+<ng-template #elseBlock01>
+  <h2>Else condition is working</h2>
+</ng-template>
+
+<ng-template #elseBlock02>
+  <h2>If Else Then condition is working</h2>
+</ng-template>
+
+<!-- Multiple if-else conditions -->
+<ng-template [ngIf]="val_02 === 'World'">
+  <h2 style="color:red">Hello earthlingers </h2>
+</ng-template>
+<ng-template [ngIf]="val_02 === 'Hello'">
+  <h2 style="color:red">Hello earthlingers </h2>
+</ng-template>
+<ng-template [ngIf]="val_02 === 'Masum'">
+  <h2 style="color:red">Hello Masum </h2>
+</ng-template>
+<!-- Switch Case-->
+<div [ngSwitch]="color01">
+  <h2 style="color:blue" *ngSwitchCase="'blue'"> It's Ok, Shit Happens...</h2>
+  <h2 style="color:green" *ngSwitchCase="'green'">Life is not so beautiful...you think...</h2>
+  <h2 style="color:magenta" *ngSwitchCase="'magenta'">Struggle hard to achieve great success</h2>
+  <h2 style="color:chocolate" *ngSwitchDefault>Life is really Beautiful</h2>
+</div>
+
+<!-- Array & For loop -->
+<h3 *ngFor="let x of array_01">Just imagine that: {{x}}</h3>
+<h3 *ngFor="let x of userDetails">User details: {{x.email}} --- {{x.phone}}</h3>
+
+<!-- Nested Loop -->
+<ol style="font-size:20px">
+  <ng-container *ngFor="let x of userDetails">
+  <li>{{x.name}} &nbsp;---&nbsp; {{x.phone}}</li>
+  <ng-container *ngFor="let y of x.accounts">
+    <ul>
+    <li>{{y}}</li>
+    </ul>
+  </ng-container>
+  </ng-container>
+</ol>
+
+
 <app-footer></app-footer>
