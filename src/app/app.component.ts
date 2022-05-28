@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,20 @@ export class AppComponent {
     {name: 'Brainy Fool', email: 'brainy_fools@gmail.com', phone: '01533942468',accounts:['gmail','facebook','twitter']},
   ];
 
+  colorVal = "green"
+  bgVal = "red"
+  countPressed: number = 0;
+  update_colorr(){
+    this.countPressed++
+    if(this.countPressed %2 == 0) {
+      this.bgVal = "green"
+      this.colorVal = "red"
+    }else{
+      this.colorVal = "green"
+      this.bgVal = "red"
+    }
+    console.warn("counter value of Button Pressed: "+this.countPressed)
+  }
 
   first_fun() {
     return "Function has been called";
@@ -38,5 +53,15 @@ export class AppComponent {
   getting_inputValue01(val: any) {
     console.warn(val)
     this.displayVal = val;
+  }
+
+  userData:any={}
+  get_Form_Data(data:NgForm) {
+    console.warn(data)
+    this.userData = data
+  }
+
+  toggole_Button(){
+    this.truth_value =! this.truth_value
   }
 }
