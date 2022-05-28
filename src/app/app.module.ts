@@ -9,6 +9,7 @@ import {UserListComponent} from './user-list/user-list.component';
 import {OurAddressComponent} from './our-address/our-address.component';
 import {CountryListComponent} from './country-list/country-list.component';
 import {FormsModule} from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     ProfilingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

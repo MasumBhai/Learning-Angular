@@ -79,12 +79,12 @@
 <!-- Nested Loop -->
 <ol style="font-size:20px">
   <ng-container *ngFor="let x of userDetails">
-  <li>{{x.name}} &nbsp;---&nbsp; {{x.phone}}</li>
-  <ng-container *ngFor="let y of x.accounts">
-    <ul>
-    <li>{{y}}</li>
-    </ul>
-  </ng-container>
+    <li>{{x.name}} &nbsp;---&nbsp; {{x.phone}}</li>
+    <ng-container *ngFor="let y of x.accounts">
+      <ul>
+        <li>{{y}}</li>
+      </ul>
+    </ng-container>
   </ng-container>
 </ol>
 <!-- sTYLE bINDING -->
@@ -92,7 +92,7 @@
 <button (click)="update_colorr()">Change Me</button>
 
 <h2>Basic Form</h2>
-<form #basicForm="ngForm" (ngSubmit)="get_Form_Data(basicForm.value)" >
+<form #basicForm="ngForm" (ngSubmit)="get_Form_Data(basicForm.value)">
   <input type="text" ngModel placeholder="Enter Your Name" name="user_name"/>
   <br/><br/>
   <input type="text" ngModel placeholder="Enter Your Email" name="email"/>
@@ -105,14 +105,29 @@
 </form>
 
 <h2 *ngIf="truth_value">Is it your password: {{userData.user_pass}}</h2>
-<!-- -->
-<!--<button (click)="toggole_Button()">Toggle</button>-->
-<!--<h1>Toggle success</h1>-->
 
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel title="Simple">
+    <ng-template ngbPanelContent>
+      <p>Many a times people are genuine, they know how to carry themselves, but they lack in their confidence levels they cannot express themselves properly. They have fear in them; am I speaking right or no! What will people think about me, are they making fun of me? Such questions of self-doubt suddenly take you on the back foot. The fact is many times these people know a lot more than the people who are speaking. It is just they have fear of audience.</p>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>&#9733; <b>Fancy</b> title &#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <p>Although most of us have the freedom to make a wide range of choices at any given moment, we often make decisions based on the environment we find ourselves in.</p>
 
-
-
-
+      <p>Default choices are not inherently bad, but the entire world was not designed with your goals in mind. In fact, many companies have goals that directly compete with yours (a food company may want you to buy their bag of chips, while you want to lose weight). For this reason, you should be wary of accepting every default as if it is supposed to be the optimal choice.</p>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Disabled" [disabled]="true">
+    <ng-template ngbPanelContent>
+      I am currently pursuing my B.Sc (final year) in CSE at Military Institute of Science & Technology, Bangladesh. I am an open source enthusiast & always hungry for project related work. However I consider myself a more of an 'elephant in the room' than a 'shut-in nerd', well, Actually Both are True. Again, I like to introduce myself as an anime lover (Otaku) & malayalam movie admirers & a bookworm. I read Alexandre Dumas 'Three Musketeers' in class six & William Shakespeare's 'Hamlet' in class seven & read Leo Tolstoy's 'War and Peace' in college. Alright past is past, now sometimes I imagine myself as a 'professional code stealer' from stackoverflow. I can't honestly say that I really love staring at the monitor and typing stuffs that make sense to a specific group of people, but it is what it is. And I don't think an intro like this okay to fully say who am I in real. But I keenly wish to learn more and become as skillful as possible within my limits
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
 
 
 <app-footer></app-footer>

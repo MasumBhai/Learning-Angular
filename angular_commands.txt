@@ -26,7 +26,10 @@ ng g c <component_name> --inline-style
 ng g c <component_name> --inline-template
 ng g c <component_name> --inline-style --inline-template
 # module kintu manually register korte hoy, inside app.module.ts & that imported modules ts file write: export : [<component_name>]
-
+# to install bootstrap
+ng update @angular/cli @angular/core
+npm config set legacy-peer-deps true
+ng add @ng-bootstrap/ng-bootstrap
 
 inside class of app.component.ts:
 don't need to wrtie function before creating function, like: function func_name(){}
