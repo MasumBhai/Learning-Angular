@@ -23,5 +23,10 @@ export class AppComponent implements OnInit {
       secondCtrl: ['', Validators.required],
     });
   }
+// child to parent
+  data = 10;
 
+  update_child() {
+    this.data = Math.floor(Math.random()*1000)
+  }
 }

@@ -17,11 +17,13 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatStepperModule} from "@angular/material/stepper";
 import { TodoListComponent } from './todo-list/todo-list.component';
 import {MatListModule} from "@angular/material/list";
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

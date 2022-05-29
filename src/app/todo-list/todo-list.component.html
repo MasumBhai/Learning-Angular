@@ -5,7 +5,7 @@
     <input #item01 matInput placeholder="masum@gmail.com" [formControl]="email" required>
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
-    <button (click)="addTask(item01.value)" mat-raised-button color="primary">Primary</button>
+    <button (click)="addTask(item01.value)" mat-raised-button color="primary">Add</button>
 </div>
 
 <mat-list role="list">
