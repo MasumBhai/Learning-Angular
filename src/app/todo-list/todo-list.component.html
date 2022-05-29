@@ -1,0 +1,14 @@
+<h2>Your Task is to add email address</h2>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter new email</mat-label>
+    <input #item01 matInput placeholder="masum@gmail.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+    <button (click)="addTask(item01.value)" mat-raised-button color="primary">Primary</button>
+</div>
+
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let item of list01">{{item.id + 1}}  {{item.email}} <button (click)="removeTask(item.id,item.email)" mat-raised-button color="warn">Remove</button> </mat-list-item>
+</mat-list>
+

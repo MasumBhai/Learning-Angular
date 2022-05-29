@@ -1,0 +1,41 @@
+NPM is a “package manager” that makes installing Node “packages” fast and easy. A package is just a code library that extends Node by adding useful features. For example, the “request” package simplifies the process of making HTTP requests so you can easily get web resources from other sites
+
+Single Page Application:
+if you go through Gmail, you will notice that while opening mail from the inbox will only fetch the email and display it in place of the e-mail list. The rest of the components like sidebar, navigation bar, etc. are not reloaded. It only refreshes the DOM (Document Object Model) for the required section. So, this reduces the overhead loading of the website.
+
+
+
+npm install -g @angular/cli
+ng version
+ng new <application_name>
+# inside the application folder:
+ng serve
+npm install -g npm
+ng help
+ng generate component <component_name>
+ng g c <component_name>
+ng g m <module_name>
+# inside module, you can create multiple component
+ng g c <module_name>/<component_name>
+ng g class <class_name>
+ng g service <service_name>
+# inside module, you can create service
+ng g service <module_name>/<service_name>
+ng build
+ng g c <component_name> --inline-style
+ng g c <component_name> --inline-template
+ng g c <component_name> --inline-style --inline-template
+# module kintu manually register korte hoy, inside app.module.ts & that imported modules ts file write: export : [<component_name>]
+# to add materialization-UI
+ng add @angular/material
+
+inside class of app.component.ts:
+don't need to wrtie function before creating function, like: function func_name(){}
+just func_name(){} will do.
+tsconfig.json can be modified...& function parameter or anything typescript strict functionality can be make false.
+
+Priority of styling:
+inline style(inside app.component.html) > component style(app.component.css) > global style (style.css)
+
+with interpolation, we can not use Boolean value
+But Property Binding can help here
