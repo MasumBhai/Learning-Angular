@@ -18,12 +18,14 @@ import {MatStepperModule} from "@angular/material/stepper";
 import { TodoListComponent } from './todo-list/todo-list.component';
 import {MatListModule} from "@angular/material/list";
 import { ChildComponent } from './child/child.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    ChildComponent
+    ChildComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

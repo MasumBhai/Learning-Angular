@@ -1,2 +1,7 @@
 <app-child [item]="data"></app-child>
 <button (click)="update_child()" mat-raised-button color="primary">Change Me</button>
+<hr>
+<h2>Re-usable Component</h2>
+<ul *ngFor="let user of userDetails">
+    <app-user-details [item]="user"></app-user-details>
+</ul>

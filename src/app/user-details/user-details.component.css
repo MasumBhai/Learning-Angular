@@ -1,0 +1,13 @@
+li {
+  width: 15%;
+  display: inline-block;
+  padding: 11px;
+  margin-right: 8px;
+  border-left:3px solid darkorange;
+  border-top:3px solid darkorange;
+  border-right:3px solid darkorange;
+  border-bottom:3px solid darkorange;
+  background-color: lime;
+  border-radius:5px;
+  text-align: center;
+}
