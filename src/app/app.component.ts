@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-// child to parent
+// parent to child
   data = 10;
   userDetails = [
     {name:'MasumMisT',email:'201914044@student.mist.ac.bd'},
@@ -39,5 +39,10 @@ export class AppComponent implements OnInit {
 
   update_child() {
     this.data = Math.floor(Math.random() * 1000)
+  }
+
+  data_parent:string = ""
+  update_parent(item: string) {
+    this.data_parent = item;
   }
 }

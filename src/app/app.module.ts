@@ -19,13 +19,15 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import {MatListModule} from "@angular/material/list";
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { Child02Component } from './child02/child02.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     ChildComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    Child02Component
   ],
   imports: [
     BrowserModule,
