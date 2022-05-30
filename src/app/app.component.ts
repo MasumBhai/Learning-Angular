@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Learning-Angular';
+  data_bind:string = ''
 }
