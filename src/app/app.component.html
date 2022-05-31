@@ -1,0 +1,23 @@
+<h2>Re-active Form</h2>
+<br/>
+<form [formGroup]="loginform" (ngSubmit)="loginForm01()">
+  <input type="text" name="name" placeholder="Your Name" formControlName="userName" required/>
+  <br/>
+  <div>
+    <span *ngIf="userName && userName.invalid && userName.touched" style="color: red;">Please enter a Valid input</span>
+  </div>
+  <br/>
+
+  <input type="password" name="password" placeholder="Password" minlength="4" formControlName="userPass" required/>
+  <br/>
+  <div>
+    <!--    <span *ngIf="password.errors?.['minlength']" style="color: red;">Please enter a strong password</span>-->
+    <span *ngIf="userPass && userPass.invalid && userPass.touched "
+          style="color: red;">Please enter a valid password</span> <br/>
+  </div>
+  <br/>
+
+  <button name="form-submit01" [disabled]="loginform.invalid">Submit</button>
+  <!--  <button name="form-submit01" >Submit</button>-->
+</form>
+<h3>here in ngif this should be the function name defined in ts file</h3>
