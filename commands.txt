@@ -46,5 +46,7 @@ ng g c <component_name> --inline-style --inline-template
 ng add @angular/material
 # to create directive
 ng g directive <directive-name>
+# to create service
+ng g service <service-name>
 
 
