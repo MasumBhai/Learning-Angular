@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Learning-Angular';
+  today = Date()
+  user = {
+    name:'Abdullah Al Masum',
+    university: 'MIST',
+  }
 }
