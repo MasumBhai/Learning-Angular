@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Learning-Angular';
+
+  loginFormFunc(item:any) {
+    console.log(item)
+  }
 }
