@@ -1,7 +1,7 @@
 <h2>validation can be done through assigning id equals to ngModel</h2>
 <br/>
 <form #loginform01="ngForm" (ngSubmit)="loginFormFunc(loginform01.value)">
-  <input type="text" #name="ngModel" pattern="[a-zA-Z]+$" name="name" placeholder="Your Name" ngModel required />
+  <input type="text" #name="ngModel" pattern="[a-zA-Z]+$" name="name" placeholder="Your Name" ngModel required/>
   <br/>
   <div>
     <span *ngIf="name.invalid && name.touched" style="color: red;">Please enter a Valid input</span>
